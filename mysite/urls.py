@@ -23,5 +23,6 @@ urlpatterns = [
     path("", views.home),
     path("aboutus/", views.aboutUs),
     path("aboutus/<int:portid>", views.portfolio),
-    path('form/', views.user_form)
+    path('form/', views.user_form),
+    path('submitform/', views.submitForm, name = 'submitForm')
 ]
