@@ -20,10 +20,11 @@ def portfolio (request, portid):
     return HttpResponse(portid)
 
 def user_form(request):
+    ans = 0
     try:
         n1 = int(request.GET['num1'])
         n2 = int(request.GET['num2'])
-        print(n1+n2)
+        ans = n1+n2
     except:
         pass
-    return render(request, "forms.html")
+    return render(request, "forms.html",{"output" : ans})
