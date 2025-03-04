@@ -1,15 +1,11 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from service.models import Service
 
 def home (request):
+    serviceData = Service.objects.all()
     data =  {
-        "title": "Home",
-        "clist": ['Python', "django", "laravel"],
-        "numbers":[],
-        "students":[
-            {"name":"Ali", "id": 24},
-            {"name":"Arman", "id": 25},
-        ]
+        'servicedata': serviceData
     }
     return render(request, "index.html", data)
 
