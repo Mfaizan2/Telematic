@@ -23,4 +23,5 @@ urlpatterns = [
     path("", views.home),
     path("aboutus/", views.aboutUs),
     path("aboutus/<int:portid>", views.portfolio),
+    path('form/', views.user_form)
 ]
