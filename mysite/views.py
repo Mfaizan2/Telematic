@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from service.models import Service
 
 def home (request):
-    serviceData = Service.objects.all()
+    serviceData = Service.objects.all().order_by('service_title')
     data =  {
         'servicedata': serviceData
     }
